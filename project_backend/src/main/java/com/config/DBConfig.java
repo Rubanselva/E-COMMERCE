@@ -12,7 +12,9 @@ import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.model.Cart;
 import com.model.Category;
+import com.model.Orders;
 import com.model.Product;
 import com.model.Supplier;
 import com.model.User;
@@ -35,7 +37,7 @@ public class DBConfig
 		driverMgrDataSource.setUsername("rub");
 		driverMgrDataSource.setPassword("");
 		System.out.println("started");
-		return driverMgrDataSource;
+		return driverMgrDataSource; 
 	}
 	
 	//Session Factory Bean Created.
@@ -52,7 +54,8 @@ public class DBConfig
 		localSessionFacBuilder.addAnnotatedClass(Category.class);
 		localSessionFacBuilder.addAnnotatedClass(Supplier.class);
 		localSessionFacBuilder.addAnnotatedClass(Product.class);
-		
+		localSessionFacBuilder.addAnnotatedClass(Cart.class);
+		localSessionFacBuilder.addAnnotatedClass(Orders.class);
        
 		SessionFactory sessionFactory=localSessionFacBuilder.buildSessionFactory(); 
 		System.out.println("Session Factory Object Created");

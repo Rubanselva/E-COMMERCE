@@ -46,10 +46,10 @@ public class PageController {
 	{
 		return "Product";
 	}
-	@RequestMapping(value="/Customer")
-	public String showCustomerPage()
+	@RequestMapping(value="/Uhome")
+	public String showUhomePage()
 	{
-		return "Customer";
+		return "Uhome";
 	}
 	
 	@RequestMapping(value="/login_success")

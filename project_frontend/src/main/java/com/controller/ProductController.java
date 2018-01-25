@@ -45,7 +45,7 @@ public class ProductController
 		return "Product";
 	}
 	
-	@RequestMapping(value="Customer",method=RequestMethod.GET)
+	@RequestMapping(value="Uhome",method=RequestMethod.GET)
 	public String showCustomer(Model m)
 	{
 		Product product= new Product();
@@ -54,7 +54,7 @@ public class ProductController
 		m.addAttribute("productList",listProduct);
 		m.addAttribute("categoryList",this.getCatgories());
 		m.addAttribute("supplierList", this.getSuppliers());
-		return "Customer";
+		return "Uhome";
 	}
 	
 	@RequestMapping(value="ProductDetails/{pid}",method=RequestMethod.GET)
